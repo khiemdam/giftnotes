@@ -1,104 +1,115 @@
-<a href="https://demo-nextjs-with-supabase.vercel.app/">
-  <img alt="Next.js and Supabase Starter Kit - the fastest way to build apps with Next.js and Supabase" src="https://demo-nextjs-with-supabase.vercel.app/opengraph-image.png">
-  <h1 align="center">Next.js and Supabase Starter Kit</h1>
-</a>
+<!-- Shields from shields.io -->
+![Author][author-shield]
+[![LinkedIn][linkedin-shield]][linkedin-url] ![Status][status-shield]
+<!-- [![Handshake][handshake-shield]][handshake-url]  -->
 
-<p align="center">
- The fastest way to build apps with Next.js and Supabase
-</p>
+# GiftNotes Web App
 
-<p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#demo"><strong>Demo</strong></a> ·
-  <a href="#deploy-to-vercel"><strong>Deploy to Vercel</strong></a> ·
-  <a href="#clone-and-run-locally"><strong>Clone and run locally</strong></a> ·
-  <a href="#feedback-and-issues"><strong>Feedback and issues</strong></a>
-  <a href="#more-supabase-examples"><strong>More Examples</strong></a>
-</p>
-<br/>
+### Next.js/Supabase App that allows you to remember things about your friends, such as their hobbies, likes/dislikes, and other important information. In addition, it recommends gifts to get your friends based on the notes you took about them!
 
-## Features
+<!-- ![Website Image](/images/image_name.png) -->
+Image here...
 
-- Works across the entire [Next.js](https://nextjs.org) stack
-  - App Router
-  - Pages Router
-  - Middleware
-  - Client
-  - Server
-  - It just works!
-- supabase-ssr. A package to configure Supabase Auth to use cookies
-- Styling with [Tailwind CSS](https://tailwindcss.com)
-- Components with [shadcn/ui](https://ui.shadcn.com/)
-- Optional deployment with [Supabase Vercel Integration and Vercel deploy](#deploy-your-own)
-  - Environment variables automatically assigned to Vercel project
+## Table of Contents
+* [Motivation](#motivation)
+* [Technologies](#technologies)
+* [Timeline & Planning](#timeline--planning)
+* [Prototyping & Testing](#prototyping--testing)
+* [Installation](#installation)
+* [How To Use](#how-to-use)
+* [To-Do List](#to-do-list)
+* [Status](#status)
+* [Notes](#notes)
+* [Credits](#credits)
 
-## Demo
+## Motivation
+During my last year of college, I worked on a UX project to address a user's needs and creating design requirements for a potential product. What I (and many others) struggle with is **finding the right gift for someone** and **remembering major/minor things about people**. For the project, I needed to address user needs of having a low stress, easy to access way to accomplish these things. [(more about that project here)](https://docs.google.com/presentation/d/1dWq5GJjx4928IoYPuags-LzF1mkK41XEh3JFEf4TkZE/edit?usp=sharing)
 
-You can view a fully working demo at [demo-nextjs-with-supabase.vercel.app](https://demo-nextjs-with-supabase.vercel.app/).
+I wanted to turn this into a ***PERSONAL PROJECT*** because I felt like I could use an app that could allow me to keep notes about my friends and recommend meaningful gifts that I could give to them. My goal was to make a simple version of this idea from my UX project. I also wanted to touch up on my React/Next skills and learn a new relational database tool.
 
-## Deploy to Vercel
+## Timeline & Planning
+***TODO***
 
-Vercel deployment will guide you through creating a Supabase account and project.
+## Prototyping & Testing
+***TODO***
 
-After installation of the Supabase integration, all relevant environment variables will be assigned to the project so the deployment is fully functioning.
+## Technologies
+* Next.js
+* Supabase
+* Any IDE (I used VSCode)
+* ***TODO: Add additional technologies***
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-supabase&project-name=nextjs-with-supabase&repository-name=nextjs-with-supabase&demo-title=nextjs-with-supabase&demo-description=This+starter+configures+Supabase+Auth+to+use+cookies%2C+making+the+user%27s+session+available+throughout+the+entire+Next.js+app+-+Client+Components%2C+Server+Components%2C+Route+Handlers%2C+Server+Actions+and+Middleware.&demo-url=https%3A%2F%2Fdemo-nextjs-with-supabase.vercel.app%2F&external-id=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-supabase&demo-image=https%3A%2F%2Fdemo-nextjs-with-supabase.vercel.app%2Fopengraph-image.png)
+## Installation
+Navigate to your desired directory. In your shell/terminal, type in the following:
 
-The above will also clone the Starter kit to your GitHub, you can clone that locally and develop locally.
+With SSH Keys:
+```
+git clone git@github.com:khiemdam/giftnotes.git
+```
+With HTTPS:
+```
+git clone https://github.com/khiemdam/giftnotes.git
+```
+<br>
 
-If you wish to just develop locally and not deploy to Vercel, [follow the steps below](#clone-and-run-locally).
 
-## Clone and run locally
+Make sure you have node package manager (npm or pnpm) installed
 
-1. You'll first need a Supabase project which can be made [via the Supabase dashboard](https://database.new)
+[npm installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-2. Create a Next.js app using the Supabase Starter template npx command
+[pnpm installation](https://pnpm.io/installation)
 
-   ```bash
-   npx create-next-app --example with-supabase with-supabase-app
-   ```
 
-   ```bash
-   yarn create next-app --example with-supabase with-supabase-app
-   ```
+<br>
 
-   ```bash
-   pnpm create next-app --example with-supabase with-supabase-app
-   ```
 
-3. Use `cd` to change into the app's directory
+Install the required dependencies:
+```
+npm install
 
-   ```bash
-   cd with-supabase-app
-   ```
+or
 
-4. Rename `.env.example` to `.env.local` and update the following:
+pnpm install
+```
 
-   ```
-   NEXT_PUBLIC_SUPABASE_URL=[INSERT SUPABASE PROJECT URL]
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=[INSERT SUPABASE PROJECT API ANON KEY]
-   ```
+Make a new file called .env.local and add the following with your supabase project url & key:
+```
+NEXT_PUBLIC_SUPABASE_URL=[INSERT SUPABASE PROJECT URL]
+NEXT_PUBLIC_SUPABASE_ANON_KEY=[INSERT SUPABASE PROJECT API ANON KEY]
+```
 
-   Both `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` can be found in [your Supabase project's API settings](https://app.supabase.com/project/_/settings/api)
+## How To Use
+To use locally, run one of the following commands:
+```
+npm run dev
 
-5. You can now run the Next.js local development server:
+or
 
-   ```bash
-   npm run dev
-   ```
+pnpm run dev
+```
+***TODO: Write Deploy Instructions?***
 
-   The starter kit should now be running on [localhost:3000](http://localhost:3000/).
+## To-Do List
+- ***TODO: Write TODO List***
 
-6. This template comes with the default shadcn/ui style initialized. If you instead want other ui.shadcn styles, delete `components.json` and [re-install shadcn/ui](https://ui.shadcn.com/docs/installation/next)
+## Status
+Currently working on the project! I am relearning the syntax of Next.js and how to query to Supabase. I am mainly focused on planning out the project and creating a timeline of what needs to be accomplished.
 
-> Check out [the docs for Local Development](https://supabase.com/docs/guides/getting-started/local-development) to also run Supabase locally.
+## Notes
+***TODO: Explain important moments/steps taken in the project when the time comes...***
 
-## Feedback and issues
+## Credits
+* [Supabase Docs](https://supabase.com/docs)
+* [Next.js Docs](https://nextjs.org/docs)
+* [Figma Design Tool](http://figma.com/)
+* [Draw.io Process Mapping/ER Diagram Tool](https://draw.io/)
+* [Social Icons](https://fontawesome.com/)
 
-Please file feedback and issues over on the [Supabase GitHub org](https://github.com/supabase/supabase/issues/new/choose).
-
-## More Supabase examples
-
-- [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
-- [Cookie-based Auth and the Next.js 13 App Router (free course)](https://youtube.com/playlist?list=PL5S4mPUpp4OtMhpnp93EFSo42iQ40XjbF)
-- [Supabase Auth and the Next.js App Router](https://github.com/supabase/supabase/tree/master/examples/auth/nextjs)
+<!-- Links & Images -->
+[author-shield]: https://img.shields.io/badge/Author-Khiem_Dam-555?style=for-the-badge&color=999
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-555?style=for-the-badge&logo=linkedIn
+[linkedin-url]: https://www.linkedin.com/in/khiemd/
+[handshake-shield]: https://img.shields.io/badge/Handshake-555?style=for-the-badge&logo=handshake&logoColor=white
+[handshake-url]: https://app.joinhandshake.com/stu/users/31441591
+[status-shield]: https://img.shields.io/badge/status-in_progress-555?style=for-the-badge&labelColor=555&color=FFA500
+<!-- https://img.shields.io/badge/status-completed-555?style=for-the-badge&labelColor=555&color=03c04a -->

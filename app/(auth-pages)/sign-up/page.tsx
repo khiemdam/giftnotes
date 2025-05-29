@@ -4,7 +4,6 @@ import { SubmitButton } from "@/components/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { SmtpMessage } from "../smtp-message";
 
 export default async function Signup(props: {
   searchParams: Promise<Message>;
@@ -29,9 +28,9 @@ export default async function Signup(props: {
           </Link>
         </p>
         <div className="flex flex-col gap-2 [&>input]:mb-3 mt-8">
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email">Email *</Label>
           <Input name="email" placeholder="you@example.com" required />
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password">Password *</Label>
           <Input
             type="password"
             name="password"
@@ -39,13 +38,33 @@ export default async function Signup(props: {
             minLength={6}
             required
           />
+          <Label htmlFor="username">Username *</Label>
+          <Input
+            type="username"
+            name="username"
+            placeholder="Your username"
+            minLength={4}
+            required
+          />
+          <Label htmlFor="firstname">First Name *</Label>
+          <Input
+            type="firstname"
+            name="firstname"
+            placeholder="Your first name"
+            required
+          />
+          <Label htmlFor="lastname">Last Name</Label>
+          <Input
+            type="lastname"
+            name="lastname"
+            placeholder="Your last name"
+          />
           <SubmitButton formAction={signUpAction} pendingText="Signing up...">
             Sign up
           </SubmitButton>
           <FormMessage message={searchParams} />
         </div>
       </form>
-      <SmtpMessage />
     </>
   );
 }
